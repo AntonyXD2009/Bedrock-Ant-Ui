@@ -1,2 +1,2 @@
 # Ui-Pack
-Resource Pack for Minecraft Bedrock/Windows 10
+Complemento de Interfaz para Minecraft bedrock/Win 10

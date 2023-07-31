@@ -1,0 +1,29 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§lBedrock Ant-UI [v1.10.2]",
+		"description": "manifest.description",
+		"uuid": "67c721ef-e92d-4fc0-9000-587b41ce8312",
+		"version": [
+			1,
+			0,
+			9
+		],
+		"min_engine_version": [
+			1,
+			19,
+			32
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "b1805889-846a-458e-842e-413fa84dc403",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

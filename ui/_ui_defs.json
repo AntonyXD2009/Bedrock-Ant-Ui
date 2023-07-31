@@ -1,0 +1,6 @@
+{
+  "ui_defs": [
+    "ui/ant_ui/other_screen.json",
+    "ui/ant_ui/anims/screen_animation.json"
+  ]
+}

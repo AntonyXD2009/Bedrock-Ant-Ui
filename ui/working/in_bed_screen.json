@@ -1,0 +1,173 @@
+{
+  "namespace": "bed",
+  "button_wake_up@button": {
+    "$button_text": "bed.wake_up",
+    "size": [
+      128,
+      26
+    ],
+    "layer": 1,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+  "button_open_chat@button": {
+    "$button_text": "bed.open_chat",
+    "size": [
+      128,
+      26
+    ],
+    "layer": 1,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.chat",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.chat",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+  "wake_up_panel@bed.txt": {
+    "size": [
+      "default",
+      50
+    ],
+    "text": "#wake_up_label_panel",
+    "color": "$main_header_text_color",
+    "bindings": [
+      {
+        "binding_name": "#wake_up_label_panel"
+      }
+    ]
+  },
+  "button@common_buttons.light_text_button": {},
+  "bed_screen_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "z_text_panel": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "z0@bed.z_txt": {
+                "offset": [
+                  20,
+                  -26
+                ]
+              }
+            },
+            {
+              "z1@bed.z_txt": {
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "z2@bed.z_txt": {
+                "offset": [
+                  -20,
+                  26
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "w_up_label@bed.wake_up_panel": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [
+            0,
+            -32
+          ]
+        }
+      },
+      {
+        "wake_up@bed.button_wake_up": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [
+            -112,
+            -24
+          ]
+        }
+      },
+      {
+        "chat@bed.button_open_chat": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [
+            112,
+            -24
+          ]
+        }
+      }
+    ]
+  },
+  "z_txt@bed.txt": {
+    "text": "Z",
+    "color": "$main_header_text_color",
+    "font_scale_factor": 3,
+    "shadow": true,
+    "size": [
+      "default",
+      42
+    ],
+    "max_size": [
+      "default",
+      44
+    ]
+  },
+  "txt": {
+    "type": "label"
+  },
+  "in_bed_screen@common.base_screen": {
+    "$screen_content": "bed.bed_screen_content",
+    "$screen_bg_content": "bed.bg",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "bg": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/White",
+    "color": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "alpha": 0.5
+  }
+}

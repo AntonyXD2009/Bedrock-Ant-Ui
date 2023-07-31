@@ -1,0 +1,204 @@
+{
+  "namespace": "mob_effect",
+  "back_content_panel": {
+    "type": "panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "controls": [
+      {
+        "back_button@common.back_button": {
+          "$button_text_binding_type": "global",
+          "$button_text": "menu.back",
+          "$focus_id": "back_button_focus_id",
+          "offset": [
+            0,
+            -1
+          ]
+        }
+      },
+      {
+        "gamepad_back_helper": {
+          "type": "input_panel",
+          "$gamepad_helper_icon_description_text_color": "$light_glyph_default_color",
+          "$gamepad_helper_icon_description_shadow": false,
+          "tts_name": "accessibility.button.tts.title",
+          "tts_control_header": "#back_button_accessibility_text",
+          "size": [
+            "100%c",
+            26
+          ],
+          "offset": [
+            -4,
+            -1
+          ],
+          "controls": [
+            {
+              "gamepad_helper_button@common.gamepad_helper_b": {
+                "$icon_description_bind": "#back_button_text"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "mob_effect_header@common_store.store_top_bar": {
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$back_button_text": "controller.buttonTip.back",
+    "controls": [
+      {
+        "title_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "10%"
+          ],
+          "controls": [
+            {
+              "back_button_content_panel@mob_effect.back_content_panel": {
+                "offset": [
+                  2,
+                  0
+                ]
+              }
+            },
+            {
+              "title_text@mob_effect.txt": {
+                "text": "mob_effect.title",
+                "color": "black",
+                "font_type": "MinecraftTen",
+                "font_scale_factor": 2,
+                "layer": 2,
+                "size": [
+                  "default",
+                  24
+                ],
+                "offset": [
+                  0,
+                  -1
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "mob_effect_list_content_panel": {
+    "type": "panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "clips_children": true,
+    "size": [
+      "85%",
+      "90% + 8px"
+    ],
+    "offset": [
+      -10,
+      14
+    ],
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "$scrolling_content": "mob_effect.mob_effect_grid_panel",
+          "$show_background": false,
+          "$always_handle_scrolling": true,
+          "$scroll_size": [
+            "8px",
+            "94% + 8px"
+          ],
+          "$scrolling_pane_size": [
+            "85%",
+            "94% + 12px"
+          ],
+          "size": [
+            "85%",
+            "94% + 12px"
+          ]
+        }
+      }
+    ]
+  },
+  "mob_effect_grid": {
+    "type": "grid",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "grid_item_template": "mob_effect.mob_effect_grid_item",
+    "grid_dimension_binding": "#mob_effect_grid_size",
+    "collection_name": "mob_effects_collection",
+    "size": [
+      300,
+      "default"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#mob_effect_grid_size"
+      }
+    ]
+  },
+    "effect_screen_content": {
+		"type": "panel",
+		"size": [
+		  "100%",
+			"100%"
+		],
+		"controls": [
+		  {
+				"header@mob_effect.mob_effect_header": {}
+			},
+			{
+				"scrolling_panel@mob_effect.mob_effect_list_content_panel": {}
+			}
+		]
+	},
+	"button@common_buttons.light_text_button": {},
+	"icon@common_buttons.light_content_button": {},
+	"screen_bg@mob_effect.img": {
+		"texture": "textures/ui/mob_effect_bg",
+		"size": [
+		  "100%",
+			"90%"
+		]
+	},
+  "img": {
+		"type": "image"
+	},
+  "txt": {
+		"type": "label"
+	},
+  "mob_effect_screen@common.base_screen": {
+    "$use_custom_panorama": "$is_pregame",
+    "$header_safezone_control": "common_store.store_top_bar_filler",
+    "$header_bar_control": "common_store.store_top_bar",
+    "$is_full_screen_layout": true,
+    "low_frequency_rendering": true,
+    "close_on_player_hurt": false,
+    "$screen_content": "mob_effect.effect_screen_content",
+    "$screen_bg_content": "common.screen_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.mobeffects",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

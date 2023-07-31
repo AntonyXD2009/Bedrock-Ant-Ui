@@ -1,0 +1,29 @@
+{
+  "namespace": "other_button",
+    "button@common_buttons.light_text_button": {},
+    "icon@common_buttons.light_content_button": {},
+    "button_crafting_all@button": {
+        "$pressed_button_name": "button.any",
+        "$button_text": "C.T.",
+        "size": [
+            24,
+            24
+        ]
+    },
+    "button_drop_one@button": {
+        "$pressed_button_name": "button.cursor_drop_one",
+        "$button_text": "1x",
+        "size": [
+            24,
+            24
+        ]
+    },
+    "button_drop_all@button": {
+        "$pressed_button_name": "button.cursor_drop_all",
+        "$button_text": "T",
+        "size": [
+            24,
+            24
+        ]
+    }
+}

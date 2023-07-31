@@ -1,0 +1,294 @@
+{
+  "namespace": "start",
+  "achievements_icon@start.img": {
+    "texture": "textures/ui/achievements_icon",
+    "size": [
+      16,
+      16
+    ]
+  },
+  "feedback_icon@start.img": {
+    "texture": "textures/ui/feedback_icon",
+    "size": [
+      16,
+      16
+    ]
+  },
+  "xbox_icon@start.img": {
+    "texture": "textures/ui/xbox_icon",
+    "size": [
+      16,
+      16
+    ]
+  },
+  "button_play@button": {
+    "$pressed_button_name": "button.menu_play",
+    "$button_text": "start.play"
+  },
+  "button_settings@button": {
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "start.settings"
+  },
+  "button_profile@button": {
+    "$pressed_button_name": "button.to_profile_screen",
+    "$button_text": "start.profile",
+    "bindings": [
+      {
+        "binding_name": "#persona_enabled",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "skin_panel": {
+    "type": "panel",
+    "size": [
+      "40%",
+      "50%"
+    ],
+    "max_size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "viewer_panel@start.skin_viewer_panel": {}
+      }
+    ]
+  },
+  "button_exit@button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "start.exit"
+  },
+  "button_achievements@icon": {
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_content": "start.achievements_icon",
+    "bindings": [
+      {
+        "binding_name": "#sign_out_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "button_feedback@icon": {
+    "$pressed_button_name": "button.feedback_button_pressed",
+    "$button_content": "start.feedback_icon"
+  },
+  "button_how_to_play@button": {
+    "$pressed_button_name": "button.menu_how_to_play",
+    "$button_text": "pause.howToPlay"
+  },
+  "button_signin@icon": {
+    "$pressed_button_name": "button.signin",
+    "$button_content": "start.xbox_icon",
+    "bindings": [
+      {
+        "binding_name": "#sign_in_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "version@start.txt": {
+    "text": "#version",
+    "color": "white",
+    "size": [
+      48,
+      12
+    ],
+    "bindings": [
+      {
+        "binding_name": "#version"
+      }
+    ]
+  },
+  "copyright@start.txt": {
+    "text": "©Mojang AB",
+    "color": "white",
+    "size": [
+      64,
+      12
+    ]
+  },
+  "welcome@start.txt": {
+    "text": "start.welcome",
+    "color": "white",
+    "size": [
+      "default",
+      12
+    ]
+  },
+  "start_screen@common.base_screen": {
+    "load_screen_immediately": true,
+    "$screen_content": "start.start_screen_content",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_cancel",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "img": {
+    "type": "image",
+    "layer": 2
+  },
+  "txt": {
+    "type": "label",
+    "layer": 2
+  },
+  "icon@common_buttons.light_content_button": {},
+  "button@common_buttons.light_text_button": {},
+  "start_screen_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "info_bg_txt": {
+          "type": "image",
+          "texture": "textures/ui/outline_black",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "alpha": 0.6,
+          "size": [
+            62,
+            "100%c + 2px"
+          ],
+          "offset": [
+            -5,
+            -5
+          ],
+          "controls": [
+            {
+              "stack_txt": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "controls": [
+                  {
+                    "0@start.version": {
+                      "offset": [
+                        24,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "1@start.copyright": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "skin@start.skin_panel": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            "50%",
+            "60%"
+          ],
+          "max_size": [
+            "100%",
+            "100%"
+          ],
+          "offset": [
+            132,
+            52
+          ]
+        }
+      },
+      {
+        "title@common_art.start_title_panel_content": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            8
+          ]
+        }
+      },
+      {
+        "main_panel": {
+          "type": "stack_panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "orientation": "vertical",
+          "size": [
+            150,
+            26
+          ],
+          "offset": [
+            0,
+            -10
+          ],
+          "controls": [
+            {
+              "play@start.button_play": {}
+            },
+            {
+              "horizontal_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  75,
+                  26
+                ],
+                "controls": [
+                  {
+                    "settings@start.button_settings": {}
+                  },
+                  {
+                    "profile@start.button_profile": {}
+                  }
+                ]
+              }
+            },
+            {
+              "store@start.store_button_stack": {
+                "ignored": "(($trial and not $use_single_column_for_buttons))"
+              }
+            },
+            {
+              "exit@start.button_exit": {}
+            }
+          ]
+        }
+      },
+      {
+        "bottom_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "orientation": "horizontal",
+          "size": [
+            26,
+            26
+          ],
+          "offset": [
+            5,
+            -5
+          ],
+          "controls": [
+            {
+              "signin@start.button_signin": {}
+            },
+            {
+              "achievements@start.button_achievements": {}
+            },
+            {
+              "feedback@start.button_feedback": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "namespace": "crafting",
+  "output_no_coalesce_container_slot_button": {
+    "$is_output": true
+  },
+  "help_button@common.button": {
+    "visible": false
+  }
+}

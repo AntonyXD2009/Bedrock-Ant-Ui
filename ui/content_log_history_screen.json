@@ -1,0 +1,252 @@
+{
+  "namespace": "content_log_history",
+  "copy_icon": {
+    "type": "image",
+    "texture": "textures/ui/copy_icon",
+    "layer": 1,
+    "size": [
+      16,
+      16
+    ]
+  },
+  "copy_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      "100% - 2px",
+      "100% - 2px"
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "icon_panel": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icon@content_log_history.copy_icon": {}
+                  }
+                ]
+              }
+            },
+            {
+              "offset": {
+                "type": "panel",
+                "size": [
+                  4,
+                  "100%"
+                ]
+              }
+            },
+            {
+              "label_panel": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "text": "content_log.copy",
+                      "color": "$text_color"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "button_copy@common_buttons.light_content_button": {
+    "$pressed_button_name": "button.copy_to_clipboard",
+    "$button_content": "content_log_history.copy_panel"
+  },
+  "back_content_panel": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "back_button@common.back_button": {
+          "$button_text_binding_type": "global",
+          "$button_text": "menu.back",
+          "$focus_id": "back_button_focus_id",
+          "offset": [
+            0,
+            -1
+          ]
+        }
+      },
+      {
+        "gamepad_back_helper": {
+          "type": "input_panel",
+          "$gamepad_helper_icon_description_text_color": "$light_glyph_default_color",
+          "$gamepad_helper_icon_description_shadow": false,
+          "tts_name": "accessibility.button.tts.title",
+          "tts_control_header": "#back_button_accessibility_text",
+          "size": [
+            "100%c",
+            26
+          ],
+          "offset": [
+            -4,
+            -1
+          ],
+          "controls": [
+            {
+              "gamepad_helper_button@common.gamepad_helper_b": {
+                "$icon_description_bind": "#back_button_text"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content_log_header@common_store.store_top_bar": {
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$back_button_text": "controller.buttonTip.back",
+    "controls": [
+      {
+        "title_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "10%"
+          ],
+          "controls": [
+            {
+              "back_button_content_panel@content_log_history.back_content_panel": {
+                "offset": [
+                  2,
+                  0
+                ]
+              }
+            },
+            {
+              "title_text": {
+                "type": "label",
+                "text": "content_log.title",
+                "color": "black",
+                "font_type": "MinecraftTen",
+                "font_scale_factor": 2,
+                "layer": 2,
+                "size": [
+                  "default",
+                  24
+                ],
+                "offset": [
+                  0,
+                  -1
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "panel_log_message@common.scrolling_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$scrolling_content": "content_log_history.messages_stack_panel",
+    "$jump_to_bottom_on_update": true,
+    "$show_background": false,
+    "$always_handle_scrolling": true,
+    "$scroll_size": [
+      4,
+      "100% - 4px"
+    ],
+    "size": [
+      "100%",
+      "100% - 8px"
+    ],
+    "offset": [
+      2,
+      -24
+    ]
+  },
+  "c_log_message_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100% - 6px",
+      "90% - 14px"
+    ],
+    "controls": [
+      {
+        "log@content_log_history.panel_log_message": {}
+      }
+    ]
+  },
+  "log_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "message@content_log_history.c_log_message_panel": {}
+      },
+      {
+        "header@content_log_history.content_log_header": {}
+      },
+      {
+        "copy@content_log_history.button_copy": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [
+            "100% - 4px",
+            30
+          ],
+          "offset": [
+            0,
+            -1
+          ]
+        }
+      }
+    ]
+  },
+  "content_log_history_screen@common.base_screen": {
+
+    "$use_custom_panorama": "$is_pregame",
+    "$header_safezone_control": "common_store.store_top_bar_filler",
+    "$header_bar_control": "common_store.store_top_bar",
+    "$is_full_screen_layout": true,
+
+    "$screen_content": "content_log_history.log_content",
+    "$screen_bg_content": "common.screen_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

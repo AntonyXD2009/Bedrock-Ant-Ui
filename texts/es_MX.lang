@@ -1,0 +1,41 @@
+start.play=Jugar
+start.settings=Opciones
+start.store=Tienda
+start.exit=Salir
+start.profile=Perfil
+start.signin=¡Iniciar Sesion!
+start.welcome=Bienvenido a Minecraft Bedrock!
+
+manifest.description=*Optimizado para dispositivos móviles\n*Este complemento no está inspirado en Las Hormigas\nCreador: @Antony_XD\nDiscord: @antony_xd
+
+bed.wake_up=Levantarse
+bed.open_chat=Abrir el Chat
+
+chat.placeHolderText=Escribe Aqui un Mensaje...
+chat.note_message=Notas...
+chat.coordinateTypeFacing=P. del Bloque
+chat.coordinateTypePosition=P. del Jugador
+chat.jump_to_bottom=Abajo
+chat.settings.mute_chat=Ocultar Todo el Chat
+chat.settings.mute_emote_chat=Ocultar Emoticos del Chat
+chat.settings.text_to_speech=Texto del Chat a Voz
+chat.settings.font_style=Estilo de Fuente
+chat.settings.reset=Configuracion Predeterminada
+
+mob_effect.title=Duracion de Efectos
+
+menu.store=Tienda
+menu.back=Atrás
+
+map.position=X:%s , Y:%s , Z:%s
+
+content_log.copy=Copiar Registro
+content_log.title=Historial de Registro de Contenido
+
+pause.continue=Continuar
+pause.settings=Opciones
+pause.store=Tienda
+pause.profile=Perfil
+pause.quit=Guardar y Salir
+
+accessibility.chat.howtoopen=Todo Listo?, ¡Disfruta el Juego!

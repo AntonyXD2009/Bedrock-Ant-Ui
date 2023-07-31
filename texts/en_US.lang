@@ -1,0 +1,41 @@
+start.play=Play
+start.settings=Settings
+start.store=Store
+start.exit=Exit
+start.profile=Profile
+start.signin=¡Log In!
+start.welcome=Welcome to Minecraft Bedrock
+
+manifest.description=*Optimized For Mobile Device\n*This Addon is Not Inspired By Ants\nCreator: @Antony_XD\nDiscord: @antony_xd
+
+bed.wake_up=Wake Up
+bed.open_chat=Open Chat
+
+chat.placeHolderText=Write a Message Here...
+chat.note_message=Notes...
+chat.coordinateTypeFacing=P. Block
+chat.coordinateTypePosition=P. Player
+chat.jump_to_bottom=Down
+chat.settings.mute_chat=Hide All Chat
+chat.settings.mute_emote_chat=Hide Emote Chat
+chat.settings.text_to_speech=Text to Speech
+chat.settings.font_style=Font Style
+chat.settings.reset=Default Settings
+
+mob_effect.title=Effect Duration
+
+menu.store=Store
+menu.back=Back
+
+map.position=X:%s , Y:%s , Z:%s
+
+content_log.copy=Copy Register
+content_log.title=Content Log History
+
+pause.continue=Continue
+pause.settings=Settings
+pause.store=Store
+pause.profile=Profile
+pause.quit=Save & Exit
+
+accessibility.chat.howtoopen=All Ready?, ¡Enjoy the Game!

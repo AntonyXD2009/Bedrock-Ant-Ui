@@ -5,5 +5,5 @@ Minecraft Bedrock
 
 
 #### Downloads Links
-# Mediadire:
+# MediaFire:
 <a href="https://www.mediafire.com/file/wgazee9sm017fb7/Bedrock_Ant-Ui.zip/file" target="blank"><img align="center" src="https://cdn.worldvectorlogo.com/logos/mediafire-1-3.svg" height="50" /></a>

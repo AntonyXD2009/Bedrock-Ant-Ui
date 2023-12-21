@@ -1,0 +1,169 @@
+{
+ "namespace": "ant_anims",
+ "anim_button_panel_offset": {
+  "anim_type": "offset",
+  "easing": "out_expo",
+  "duration": 0.8, 
+  "from": [ 0, "35%" ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ },
+ "anim_title_panel_offset": {
+  "anim_type": "offset",
+  "easing": "out_expo",
+  "duration": 0.8, 
+  "from": [ 0, "-25%" ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ },
+ "Death_AlphaAnimationScreen": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 0.6,
+  "from": 0.8,
+  "to": 1
+ },
+ "Death_OffsetAnimationScreen": {
+  "anim_type": "offset",
+  "duration": 0.6,
+  "easing": "in_cubic",
+  "from": [
+   0,
+   "30%"
+  ],
+  "to": [
+   0,
+   0
+  ]
+ },
+ "screenshot_flash_anim": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 1.5,
+  "from": 1.0,
+  "to": 0
+ },
+ "BottomOffsetAnimation": {
+  "anim_type": "offset",
+  "duration": 1,
+  "easing": "in_cubic",
+  "from": [
+   0,
+   "-24%"
+  ],
+  "to": [
+   4,
+   4
+  ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ },
+ "DownHidePanelAnimation": {
+  "anim_type": "offset",
+  "duration": 1,
+  "easing": "in_cubic",
+  "from": [
+   0,
+   "-50%"
+  ],
+  "to": [
+   -4,
+   4
+  ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ },
+ "UpHidePanelAnimation": {
+  "anim_type": "offset",
+  "duration": 1,
+  "easing": "in_cubic",
+  "from": [
+   0,
+   0
+  ],
+  "to": [
+   -4,
+   "50%"
+  ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_push"
+ },
+ "WaitOneTime": {
+  "anim_type": "wait",
+  "duration": 1,
+  "next": "@ant_anims.UpHidePanelAnimation"
+ },
+ "head_animation": {
+  "anim_type": "flip_book",
+  "frame_count": 5,
+  "fps": 10,
+  "easing": "linear",
+  "reversible": false,
+  "initial_uv": [
+   0,
+   0
+  ]
+ },
+ "screen_exit_animation_push": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.6,
+  "from": [
+   0,
+   0
+  ],
+  "to": [
+   0,
+   "-100%"
+  ],
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+ },
+ "screen_exit_animation_pop": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.6,
+  "from": [
+   0,
+   0
+  ],
+  "to": [
+   0,
+   "-100%"
+  ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+ },
+ "screen_entrance_animation_push": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.6,
+  "from": [
+   0,
+   "100%"
+  ],
+  "to": [
+   0,
+   0
+  ],
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+ },
+ "screen_entrance_animation_pop": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.6,
+  "from": [
+   0,
+   "-100%"
+  ],
+  "to": [
+   0,
+   0
+  ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ }
+}

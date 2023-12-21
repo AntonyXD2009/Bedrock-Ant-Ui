@@ -1,0 +1,147 @@
+## Alphabetic Ordern Please ##
+
+## Chat Screen ##
+chatScreen.placeHolder.textBox=Presiona Aqui para Escribir un Comando o Mensaje...
+chat.note_message=Notas...
+chat.coordinateTypeFacing=P. del Bloque
+chat.coordinateTypePosition=P. del Jugador
+chatScreen.title=Chat & Comandos
+
+## Chat Settings Popup ##
+chat.settingsPopup.title=< Configuracion del Chat >
+chat.settingsPopup.muteChat=Ocultar Todo el Chat
+chat.settingsPopup.muteEmoteChat=Ocultar Emoticos del Chat
+chat.settingsPopup.textToSpeech=Texto del Chat a Voz
+chat.settingsPopup.reset=Configuracion Predeterminada
+## Manifest Validation Screen ##
+manifestValidationScreen.title=< Informacion Sobre el Paquete >
+manifestValidationScreen.errorList.title=Lista de Errores Encontrados
+
+## Furnace Screen ##
+furnaceScreen.title=Horno
+furnaceScreen.fuel=Combustible
+furnaceScreen.item=Objeto
+
+## Information Section ##
+informationSection.information=Informacion
+informationSection.information.title=< Informacion del Paquete >
+informationSection.infoCreator.title=Informacion del Creador:
+informationSection.youtube=Canal de YouTube
+informationSection.discord=Servidor de Discord
+informationSection.termsOfUse.title=Terminos de Uso:
+informationSection.termsOfUse.youtubers=§cYouTubers: §r¡Sin Credito al Creador Original y otros Enlaces distintos al Proporcionado por §aMCPEDL §rpueden Resultar en una Advertencia de Derechos de Autor o la Eliminacion del Video!
+informationSection.termsOfUse.creators=§6Creadores: §r¡§cNO §rCombine mis Archivos y texturas con Ningun otro Paquete o Complemento e Intente pasar mi Creacion mas los Creadores del Paquete Secundario como su Propio Trabajo!. §l¡Mi arduo Trabajo es Mio, no Tuyo!
+
+## ¡Do not delete! ##
+informationSection.myLife.info=Hola, mi nombre es Antony y Soy el Creador de este Paquete, Estoy Ubicado en Colombia/Bogota, mi Idioma Principal es el Español y estoy Aprendiendo un Poco de Ingles, aveces Cuando Tengo Tiempo Libre me Dedico a Mejorar este Paquete para Ofrecer mayor Experiencia al Usuario que lo Utilize. Normalmente Suelen Ser los Fines de Semanas ya que son Dias Festivos y Tengo Mas Tiempo de Realizar mas Cambios al Paquete. Mis Amigos me Critican porqué dicen que el Juego me Tiene Adicto pero no es Asi. solo me dedico a Jugar 1 o 2 Horas en Servidores y el Resto del Tiempo se lo Dedico a la Creación del Paquete. asi que, por favor no Critiques a las Personas solo Porque estan adictas a un Juego porque esos son sus Pasatiempos mejores que en la Vida Real.
+
+menu.accept=Aceptar
+menu.cancel=Cancelar
+menu.testLabelPanel.pack=Este Panel de texto solo se Utiliza para Probar si el Tamaño definido Muestra el Texto Deseado
+
+## Start Screen ##
+startScreen.play=Jugar
+startScreen.settings=Opciones
+startScreen.store=Tienda
+startScreen.exit=Salir
+startScreen.profile=Perfil
+startScreen.signIn=¡Iniciar Sesion!
+startScreen.welcome=Bienvenido a Minecraft Bedrock!
+startScreen.sessionLoggedIn=Estas Jugando Como:
+startSreen.dialogExit.title=Salir del Juego
+startSreen.dialogExit.panel=¿Estas seguro de que Quieres salir del Juego ;-;?
+
+## Settings Screen ##
+settings.hidehud=Ocultar Pantalla HUD
+settings.hideHand=Ocultar Mano
+settings.sound_main_title=Sonido Principal
+settings.sound_game=Sonidos del Juego
+settings.toggleSection.info=Info. de Pantalla
+settings.helpSection.info=Info. de Accesibilidad
+
+## Death Screen ##
+deathScreen.title=¡Has Muerto!
+deathScreen.respawn=Regeneracion
+deathScreen.quit=Menu Principal
+
+## General Screen ##
+generalScreen.uiSound.title=Sonidos de Interfaz
+generalScreen.gameSound.title=Sonidos del Juego
+
+## Content Log Screen ##
+contentLogScreen.copy=Copiar Registro hacia el Portapapeles
+contentLogScreen.title=Historial de Registro de Contenido
+
+## Screenshot Screen ##
+screenshot.share_info=¡Comparte tu Captura Aqui con tus Amigos Para que Sepan que Estas Jugando!
+screenshot.label=Compartir Captura de Pantalla
+screenshotScreen.share=Compartir
+screenshotScreen.cancel=Cancelar
+screenshotScreen.postScreenshot=Publicar Captura de Pantalla
+screenshotScreen.whatsUp.textBox=¿En que estas Pensando?
+
+## Enchanting Screen ##
+enchantingScreen.title=Mesa de Encantamientos
+enchantingScreen.enchantButton=Encantar!
+
+## Safe Zone Screen ##
+safeZoneScreen.title=Tamaño de la Zona Segura
+safeZoneScreen.apply=Aplicar
+safeZoneScreen.description=Para Cambiar la Zona Segura de la Pantalla, debe Deslizar las Barras Deslizantes Hasta Conseguir el Tamaño de la Zona Segura Personalizado de su Dispositivo. (§6Nota: §rPuede que Algunos Elementos no se Muestren bien Debido al Tamaño pequeño de la Zona Segura)
+
+## Progress Screen ##
+progressScreen.saveWorld=Espera, estamos Guardando el Mundo
+progressScreen.loadingResources=Cargando Recursos...
+progressScreen.generatingTerrain=Generando Terreno...
+progressScreen.pleaseWaitMoment=Esto no deberia Tardar Mucho.
+progressScreen.mobileData.title=Datos Moviles:
+progressScreen.mobileData.activated=Activado
+
+## Manifest File ##
+manifest.description=§l[Bedrock Ant-UI] §rEste Paquete Esta Optimizado para Dispositivos móviles, Este complemento no está inspirado en Las Hormigas. §6Creador: §r@Antony_xd §5(Discord), §6Colaboradores: §r@Nogcube §5(Discord)
+
+## Bed Screen ##
+bed.wake_up=Levantarse
+bed.open_chat=Abrir el Chat
+
+## Play Screen ##
+playScreen.title=¡Jugar!
+playScreen.worldSelector.title=Selector de Mundos
+playScreen.tabSelector.Worlds=Plantillas y Mundos
+playScreen.tabSelector.Friends=Amigos y Realms
+playScreen.tabSelector.Servers=Servidores Publicos
+playScreen.tabSelector.countName=Total:
+playScreen.scrollSelector.CreateNewWorld=Crear un Nuevo Mundo
+playScreen.addFriend=Agregar un Nuevo Amigo
+playScreen.realmCode.information=Para que te Puedas unir a un Mundo Realm lo Primero que debes Hacer es Ingresar el Codigo de Invitacion que el Propietario te a Proporcionado, luego deberas Esperar a que Acepte tu Invitacion. §o(Esto Puede Llegar a Tardar más de unos Minutos).
+playScreen.realmCode.panel=Ingresa el Código de Invitación ¡Aqui!
+playScreen.writeCode.textBox=Codigo de Invitacion.
+playScreen.joinCode.invitation=Ingresar con Codigo de Invitacion
+playScreen.quickPlay=Crear un Nuevo Mundo Automáticamente
+playScreen.dialogQuickPlay=Se Creara un Mundo automaticamente con las opciones predeterminadas sin necesidad de pasar por la selecciónes de mundos.
+playScreen.createGo=¡Crear Ya!
+
+## Hud Screen ##
+hudScreen.button.hideHud=Ocultar HUD
+hudScreen.bedrockAntUI.active=Bedrock Ant-UI Activado.
+
+##  Pause Screen ##
+pauseScreen.continue=Continuar
+pauseScreen.settings=Opciones
+pauseScreen.store=Tienda
+pauseScreen.profile=Vestuario
+pauseScreen.quit=Guardar y Salir
+pauseScreen.permission=Permisos de Jugador
+pauseScreen.invite=Invitar a Jugadores
+pauseScreen.achievements=Logros
+pauseScreen.feedback=FeedBack
+
+## Others Screen ##
+accessibility.chat.howtoopen=Todo Listo?, ¡Disfruta el Juego!
+
+mobEffectScreen.title=Duracion de Efectos
+
+menu.store=Tienda
+menu.back=Atrás
+
+map.position=X:%s, Y:%s, Z:%s

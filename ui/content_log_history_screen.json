@@ -1,0 +1,251 @@
+{
+ "namespace": "content_log_history",
+ "clipboard_icon@common.img": {
+  "texture": "textures/hbui/clipboard",
+  "layer": 2,
+  "size": [
+   14,
+   17
+  ]
+ },
+ "clipboard_content_panel": {
+  "type": "panel",
+  "anchor_from": "top_left",
+  "anchor_to": "top_left",
+  "size": [
+   "100%-2px",
+   "100%-2px"
+  ],
+  "controls": [
+   {
+    "stack_panel": {
+     "type": "stack_panel",
+     "orientation": "horizontal",
+     "controls": [
+      {
+       "icon_panel": {
+        "type": "panel",
+        "size": [
+         "100%c",
+         "100%"
+        ],
+        "controls": [
+         {
+          "icon@content_log_history.clipboard_icon": {}
+         }
+        ]
+       }
+      },
+      {
+       "offset": {
+        "type": "panel",
+        "size": [
+         4,
+         "100%"
+        ]
+       }
+      },
+      {
+       "label_panel": {
+        "type": "panel",
+        "size": [
+         "100%c",
+         "100%"
+        ],
+        "controls": [
+         {
+          "label@common.txtTen": {
+           "text": "contentLogScreen.copy",
+           "font_scale_factor": 1.2,
+           "color": "white",
+           "layer": 3,
+           "controls": [
+            {
+             "shadow@common.txtTen": {
+              "text": "contentLogScreen.copy",
+              "alpha": "$shadow_alpha_label",
+              "font_scale_factor": 1.2,
+              "color": "black",
+              "layer": -1,
+              "offset": [
+               1,
+               1
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "content_log_message@common.txtSmooth": {
+  "color": "$chat_text_color",
+  "localize": false,
+  "text": "#text",
+  "line_padding": 1,
+  "font_scale_factor": 1,
+  "$binding_type": "collection",
+  "$binding_name": "#content_log_text",
+  "$binding_name_override": "#text",
+  "$binding_collection_name": "content_log_message",
+  "layer": 3,
+  "size": [
+   "100%",
+   "default"
+  ],
+  "controls": [
+   {
+    "shadow@common.txtSmooth": {
+     "color": "black",
+     "alpha": "$shadow_alpha_label",
+     "localize": false,
+     "line_padding": 1,
+     "font_scale_factor": 1,
+     "layer": -1,
+     "offset": [
+      1.4,
+      1.4
+     ],
+     "bindings": [
+      {
+       "binding_type": "$binding_type",
+       "binding_name": "$binding_name",
+       "binding_name_override": "$binding_name_override",
+       "binding_collection_name": "$binding_collection_name"
+      }
+     ]
+    }
+   }
+  ],
+  "bindings": [
+   {
+    "binding_type": "$binding_type",
+    "binding_name": "$binding_name",
+    "binding_name_override": "$binding_name_override",
+    "binding_collection_name": "$binding_collection_name"
+   }
+  ]
+ },
+ "messages_scrolling_panel@common.scrolling_panel": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "anchor_from": "bottom_left",
+  "anchor_to": "bottom_left",
+  "offset": [
+   2,
+   2
+  ],
+  "$scrolling_content": "content_log_history.messages_stack_panel",
+  "$scroll_size": [
+   4,
+   "100%-4px"
+  ],
+  "$jump_to_bottom_on_update": true,
+  "$show_background": false,
+  "$always_handle_scrolling": true,
+  "$bar_visible": false
+ },
+ "content_log_image_panel@common.img": {
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "texture": "textures/hbui/header_center",
+  "layer": 2,
+  "size": [
+   "92%",
+   "70%+14px"
+  ],
+  "offset": [
+   0,
+   -8
+  ],
+  "controls": [
+   {
+    "message_panel@content_log_history.main_stack_panel": {
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "size": [
+      "100%-8px",
+      "98%-18px"
+     ]
+    }
+   }
+  ]
+ },
+ "clipboard_image_panel@common.img": {
+  "anchor_from": "bottom_middle",
+  "anchor_to": "bottom_middle",
+  "texture": "textures/hbui/header_bottom",
+  "layer": 2,
+  "size": [
+   "100%",
+   42
+  ],
+  "controls": [
+   {
+    "clipboard@content_log_history.button_clipboard_content": {
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "layer": 2,
+     "size": [
+      "100%-8px",
+      32
+     ]
+    }
+   }
+  ]
+ },
+ "button_clipboard_content@common.green_content_button": {
+  "$pressed_button_name": "button.copy_to_clipboard",
+  "$button_content": "content_log_history.clipboard_content_panel"
+ },
+ "content_log_screen_content@common.panel": {
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "screen_header@common.new_screen_header_panel": {
+     "layer": 6,
+     "$header_title_text": "contentLogScreen.title"
+    }
+   },
+   {
+    "main@content_log_history.content_log_image_panel": {}
+   },
+   {
+    "clipboard@content_log_history.clipboard_image_panel": {
+     "layer": 6
+    }
+   }
+  ]
+ },
+ "content_log_history_screen@common.base_screen": {
+  "$use_custom_panorama": "$is_pregame",
+  "$header_safezone_control": "common.new_top_bar_image",
+  "$header_bar_control": "common.new_top_bar",
+  "$is_full_screen_layout": true,
+  "$screen_content": "content_log_history.content_log_screen_content",
+  "button_mappings": [
+   {
+    "from_button_id": "button.menu_cancel",
+    "to_button_id": "button.menu_exit",
+    "mapping_type": "global"
+   },
+   {
+    "from_button_id": "button.menu_exit",
+    "to_button_id": "button.menu_cancel",
+    "mapping_type": "global"
+   }
+  ]
+ }
+}

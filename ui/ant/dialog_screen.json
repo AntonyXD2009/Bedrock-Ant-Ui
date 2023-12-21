@@ -1,0 +1,230 @@
+{
+	"namespace": "dialog_ui",
+	"dialog_ui_panel@common.input_panel": {
+		"button_mappings": [
+			{
+				"from_button_id": "modal.escape",
+				"to_button_id": "button.menu_cancel",
+				"mapping_type": "global"
+			},
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "modal.escape",
+				"mapping_type": "global"
+			}
+		],
+		"controls": [
+			{
+				"dialog@dialog_ui.dialog_panel": {
+					"offset": [
+						0,
+						"-10%"
+					],
+					"size": "$dialog_screen_panel_size"
+				}
+			}
+		]
+	},
+	"dialog_panel@common.vertical": {
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"layer": 24,
+		"controls": [
+			{
+				"dialog_content_header@common.img": {
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"texture": "textures/ui/modal/dialog_header",
+					"layer": 2,
+					"size": [
+						"100%",
+						24
+					],
+					"controls": [
+						{
+							"dialog_header_text@common.txt": {
+								"text": "$dialog_header_text",
+								"$dialog_header_text|default": "",
+								"text_alignment": "center",
+								"font_type": "MinecraftSeven",
+								"color": "white",
+								"layer": 4,
+								"size": [
+									"100%",
+									10
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"dialog_content_panel@common.img": {
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"texture": "textures/ui/modal/dialog_panel",
+					"layer": 2,
+					"size": [
+						"100%",
+						"100%-4px"
+					],
+					"controls": [
+						{
+							"dialog_scrolling_panel@common.scrolling_panel": {
+								"type": "panel",
+								"$scrolling_content": "dialog_ui.dialog_scrolling_content",
+								"$show_background": false,
+								"$always_handle_scrolling": true,
+								"$scroll_size": [
+									4,
+									"100%-4px"
+								],
+								"size": [
+									"100%-2px",
+									"100%-8px"
+								],
+								"offset": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"dialog_content_bottom@common.img": {
+					"visible": "$dialog_panel_button_visible",
+					"$dialog_panel_button_visible|default": false,
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"texture": "textures/ui/modal/dialog_bottom",
+					"layer": 2,
+					"size": [
+						"100%",
+						28
+					],
+					"controls": [
+						{
+							"dialog_one_panel@common.input_panel": {
+								"visible": "$dialog_one_button_visible",
+								"$dialog_one_button_visible|default": false,
+								"anchor_from": "center",
+								"anchor_to": "center",
+								"layer": 3,
+								"size": [
+									"100%",
+									24
+								],
+								"button_mappings": [
+									{
+										"from_button_id": "modal.escape",
+										"to_button_id": "button.menu_cancel",
+										"mapping_type": "global"
+									},
+									{
+										"from_button_id": "button.menu_cancel",
+										"to_button_id": "modal.escape",
+										"mapping_type": "global"
+									}
+								],
+								"controls": [
+									{
+										"primary_button@common.txt_button": {
+											"$pressed_button_name": "$primary_button_mapping",
+											"$button_text": "$primary_button_text",
+											"$primary_button_text|default": "",
+											"size": [
+												"100%-4px",
+												"100%-4px"
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"dialog_two_panel@common.input_panel": {
+								"anchor_from": "center",
+								"anchor_to": "center",
+								"visible": "$dialog_two_button_visible",
+								"$dialog_two_button_visible|default": false,
+								"layer": 4,
+								"size": [
+									"100%-8px",
+									"100%-10px"
+								],
+								"button_mappings": [
+									{
+										"from_button_id": "modal.escape",
+										"to_button_id": "button.menu_cancel",
+										"mapping_type": "global"
+									},
+									{
+										"from_button_id": "button.menu_cancel",
+										"to_button_id": "modal.escape",
+										"mapping_type": "global"
+									}
+								],
+								"controls": [
+									{
+										"dialog_two_panel@common.horizontal": {
+											"layer": 3,
+											"size": [
+												"100%",
+												24
+											],
+											"offset": [
+												0,
+												1.4
+											],
+											"controls": [
+												{
+													"primary_button@common.green_txt_button": {
+														"$pressed_button_name": "$primary_button_mapping",
+														"$button_text": "$primary_button_text",
+														"$primary_button_text|default": "",
+														"size": [
+															"50%",
+															"100%-4px"
+														]
+													}
+												},
+												{
+													"secondary_button@common.red_txt_button": {
+														"$pressed_button_name": "$secondary_button_mapping",
+														"$button_text": "$secondary_button_text",
+														"$secondary_button_text|default": "",
+														"size": [
+															"50%",
+															"100%-4px"
+														]
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"dialog_scrolling_content@common.txtSmooth": {
+		"text": "$dialog_panel_text",
+		"$dialog_panel_text|default": "",
+		"shadow": true,
+		"color": "white",
+		"layer": 2,
+		"size": [
+			"100%-4px",
+			"default"
+		],
+		"offset": [
+			4,
+			0
+		]
+	}
+}

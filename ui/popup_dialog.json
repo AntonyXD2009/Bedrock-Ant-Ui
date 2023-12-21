@@ -1,0 +1,7 @@
+{
+ "namespace": "popup_dialog",
+ "popup_dialog_button_with_binding@common.txt_button": {},
+ "popup_dialog_button@common.txt_button": {},
+ "modal_left_button@common.green_txt_button": {},
+ "modal_rightcancel_button@common.red_txt_button": {}
+}

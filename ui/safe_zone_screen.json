@@ -177,7 +177,10 @@
   "$button_text": "gui.confirm",
   "focus_change_down": "FOCUS_OVERRIDE_STOP",
   "layer": 3,
-  "size": [ "100%-8px", "100%-8px" ]
+  "size": [
+   "100%-8px",
+   "100%-8px"
+  ]
  },
  "dialog_screen_panel@common.vertical": {
   "anchor_from": "center",

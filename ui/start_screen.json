@@ -625,7 +625,6 @@
   "alpha": 0.2
  },
  "start_screen@common.base_screen": {
-  //"$screen_content": "safe_zone.safe_zone_screen_content",
   "$screen_content": "start.start_screen_content",
   "$screen_bg_content": "start.screen_background",
   "low_frequency_rendering": true,

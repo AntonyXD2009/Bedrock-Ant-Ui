@@ -1,5 +1,12 @@
 {
  "namespace": "screenshot",
+ "screenshot_anim_flash": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 1,
+  "from": 1.0,
+  "to": 0
+ },
  "screenshot_flash_panel@common.img": {
   "texture": "textures/ui/White",
   "alpha": "@screenshot.anim_screenshot_flash",
@@ -10,23 +17,9 @@
    "100%"
   ]
  },
- "anim_screenshot_flash": {
-  "anim_type": "alpha",
-  "easing": "in_expo",
-  "duration": 1,
-  "from": 1.0,
-  "to": 0
- },
  "button_share@common.green_content_button": {
   "$pressed_button_name": "button.share_screenshot",
-  "$button_content": "screenshot.share_content_panel",
-  "enabled": "#enabled",
-  "bindings": [
-   {
-    "binding_name": "#player_offline",
-    "binding_name_override": "#enabled"
-   }
-  ]
+  "$button_content": "screenshot.share_content_panel"
  },
  "share_icon@common.img": {
   "texture": "textures/hbui/share",
@@ -413,7 +406,7 @@
    {
     "padding0@common.panel": {
      "size": [
-      120,
+      "fill",
       "100%"
      ]
     }
@@ -429,7 +422,7 @@
    {
     "fill0@common.panel": {
      "size": [
-      "fill",
+      128,
       "100%"
      ]
     }
@@ -445,7 +438,7 @@
    {
     "padding1@common.panel": {
      "size": [
-      120,
+      "fill",
       "100%"
      ]
     }

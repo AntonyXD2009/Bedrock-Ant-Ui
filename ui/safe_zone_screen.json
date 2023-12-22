@@ -1,7 +1,10 @@
 {
  // File Create By @Antony C. ;-; //
+
  "namespace": "safe_zone",
- // Screen Content //
+
+ // Main Screen Content //
+
  "header_title_panel@common.panel": {
   "size": [
    "100%",
@@ -202,6 +205,9 @@
    }
   ]
  },
+
+ // Screen Content //
+
  "safe_zone_screen_content": {
   "type": "panel",
   "size": [
@@ -232,7 +238,9 @@
    }
   ]
  },
+
  // Screen Common //
+
  "safe_zone_screen@common.base_screen": {
   "should_be_skipped_during_automation": true,
   "$screen_content": "safe_zone.safe_zone_screen_content",

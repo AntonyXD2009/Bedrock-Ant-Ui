@@ -1,5 +1,31 @@
 {
  "namespace": "common_buttons",
+ // Buttons Template //
+ "green_content_button@common_buttons.light_content_button": {
+  "$default_button_texture|default": "textures/ui/buttons/green_default",
+  "$hover_button_texture|default": "textures/ui/buttons/green_hover",
+  "$pressed_button_texture|default": "textures/ui/buttons/green_pressed"
+ },
+ "green_text_button@common_buttons.light_text_button": {
+  "$default_button_texture|default": "textures/ui/buttons/green_default",
+  "$hover_button_texture|default": "textures/ui/buttons/green_hover",
+  "$pressed_button_texture|default": "textures/ui/buttons/green_pressed",
+  "$default_text_color": "white",
+  "$default_font": "normal"
+ },
+ "red_content_button@common_buttons.light_content_button": {
+  "$default_button_texture|default": "textures/ui/buttons/red_default",
+  "$hover_button_texture|default": "textures/ui/buttons/red_hover",
+  "$pressed_button_texture|default": "textures/ui/buttons/red_pressed"
+ },
+ "red_text_button@common_buttons.light_text_button": {
+  "$default_button_texture|default": "textures/ui/buttons/red_default",
+  "$hover_button_texture|default": "textures/ui/buttons/red_hover",
+  "$pressed_button_texture|default": "textures/ui/buttons/red_pressed",
+  "$default_text_color": "white",
+  "$default_font": "normal"
+ },
+ // Template //
  "button_image": {
   "type": "image",
   "texture": "$new_ui_button_texture",

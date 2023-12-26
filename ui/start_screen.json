@@ -47,7 +47,7 @@
  },
  "feedback_button@common_buttons.light_content_button": {
   "$pressed_button_name": "button.feedback_button_pressed",
-  "$button_content": "start.achievements_icon",
+  "$button_content": "start.feedback_icon",
   "$button_tts_header": "accessibility.start.feedback",
   "size": [
    24,
@@ -56,8 +56,9 @@
  },
  "signin_button@common_buttons.light_content_button": {
   "$pressed_button_name": "button.signin",
-  "$button_text": "start.xbox_icon",
+  "$button_content": "start.xbox_icon",
   "$focus_id": "menu_xbox_signin_button",
+  "bindings": "$bindings",
   "size": [
    "100%",
    "100%"
@@ -72,49 +73,77 @@
    "100%"
   ]
  },
- "play_button@common_buttons.light_text_button": {
-  "$pressed_button_name": "$play_button_target",
-  "$button_text": "menu.play",
-  "$focus_override_right": "profile_button",
+ "play_content_button@common_buttons.green_content_button": {
+  "$pressed_button_name": "button.menu_play",
+  "$button_content": "start.play_content_panel",
   "size": [
    "100%",
-   32
+   30
   ]
  },
- "settings_button@common_buttons.light_text_button": {
+ "play_content_panel@common.panel": {
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "size": [
+   "100%-4px",
+   "100%-4px"
+  ],
+  "controls": [
+   {
+    "default_label@common.txtTen": {
+     "text": "startScreen.play",
+     "text_alignment": "center",
+     "font_scale_factor": 1.6,
+     "layer": 2,
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "offset": [
+      0,
+      -2
+     ],
+     "controls": [
+      {
+       "shadow_label@common.txtTen": {
+        "text": "startScreen.play",
+        "text_alignment": "center",
+        "font_scale_factor": 1.6,
+        "color": "black",
+        "layer": -1,
+        "alpha": "$shadow_alpha_label",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "offset": [
+         1,
+         1
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "settings_button@start.main_button": {
   "$pressed_button_name": "button.menu_settings",
-  "$button_text": "menu.settings",
-  "size": [
-   "100%",
-   24
-  ]
+  "$button_text": "menu.settings"
  },
- "profile_button@common_buttons.light_text_button": {
+ "profile_button@start.main_button": {
   "$pressed_button_name": "button.to_profile_screen",
-  "$button_text": "profileScreen.header",
-  "$focus_id": "profile_button",
-  "$button_tts_header": "accessibility.start.profile",
-  "size": [
-   "100%",
-   24
-  ]
+  "$button_text": "profileScreen.header"
  },
- "store_button@common_buttons.light_text_button": {
+ "store_button@start.main_button": {
   "$pressed_button_name": "button.menu_store",
-  "$button_text": "menu.store",
-  "$button_text_binding_type": "none",
-  "$button_binding_condition": "none",
-  "$button_text_grid_collection_name": "",
-  "tts_inherit_siblings": true,
-  "$focus_override_right": "profile_button",
-  "size": [
-   "100%",
-   24
-  ]
+  "$button_text": "menu.store"
  },
- "exit_button@common_buttons.light_text_button": {
+ "exit_button@start.main_button": {
   "$pressed_button_name": "button.menu_exit",
-  "$button_text": "gui.exit",
+  "$button_text": "gui.exit"
+ },
+ "main_button@common_buttons.light_text_button": {
   "size": [
    "100%",
    24
@@ -122,6 +151,8 @@
  },
  // Player Information panel //
  "gamerpic_image_panel@common.panel": {
+  "anchor_from": "center",
+  "anchor_to": "center",
   "controls": [
    {
     "gamerpic_image@common.img": {
@@ -130,8 +161,8 @@
      "texture": "#texture",
      "layer": 3,
      "size": [
-      22,
-      22
+      24,
+      24
      ],
      "bindings": [
       {
@@ -153,49 +184,59 @@
      "alpha": 0.6,
      "layer": 1,
      "size": [
-      "100%sm + 4px",
-      "100%sm + 4px"
+      "100%sm + 2px",
+      "100%sm + 2px"
      ]
     }
    }
   ]
  },
- "gamertag_label_panel@common.vertical": {
-  "layer": 2,
+ "gamertag_label_panel@common.img": {
+  "texture": "textures/ui/Black",
+  "alpha": 0.6,
+  "layer": 1,
   "size": [
-   "default",
-   "100%"
+   "100%c",
+   24
   ],
   "controls": [
    {
-    "account_loggin@common.txt": {
-     "text": "options.gamertag",
-     "shadow": true,
-     "size": [
-      "default",
-      10
-     ]
-    }
-   },
-   {
-    "padding@common.panel": {
-     "size": [
-      0,
-      "fill"
-     ]
-    }
-   },
-   {
-    "gamertag_label@common.txt": {
-     "text": "#playername",
-     "shadow": true,
-     "size": [
-      "default",
-      10
-     ],
-     "bindings": [
+    "vertical_panel@common.vertical": {
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "controls": [
       {
-       "binding_name": "#playername"
+       "account_loggin@common.txt": {
+        "text": "options.gamertag",
+        "shadow": true,
+        "size": [
+         "default",
+         10
+        ]
+       }
+      },
+      {
+       "padding@common.panel": {
+        "size": [
+         0,
+         "fill"
+        ]
+       }
+      },
+      {
+       "gamertag_label@common.txtSmooth": {
+        "text": "#playername",
+        "shadow": true,
+        "size": [
+         "default",
+         10
+        ],
+        "bindings": [
+         {
+          "binding_name": "#playername"
+         }
+        ]
+       }
       }
      ]
     }
@@ -218,22 +259,40 @@
     "gamerpic_image@start.gamerpic_image_panel": {}
    },
    {
+    "padding@common.panel": {
+     "size": [
+      1,
+      0
+     ]
+    }
+   },
+   {
     "gamertag@start.gamertag_label_panel": {}
    }
   ]
  },
  // Title Image Panel //
- "title_image_panel@common_art.start_title_panel_content": {
+ "title_image_panel@common.panel": {
   "anchor_from": "top_middle",
   "anchor_to": "top_middle",
   "layer": 3,
   "size": [
-   464,
-   52
+   472,
+   58
   ],
   "offset": [
    0,
    "4%"
+  ],
+  "controls": [
+   {
+    "title_image@common_art.start_title_panel_content": {
+     "size": [
+      "100% - 4px",
+      "100% - 2px"
+     ]
+    }
+   }
   ]
  },
  // Main Button Panel //
@@ -241,18 +300,24 @@
   "anchor_from": "center",
   "anchor_to": "center",
   "size": [
-   168,
+   172,
    "100%c"
+  ],
+  "offset": [
+   0,
+   12
   ],
   "controls": [
    {
-    "play@start.play_button": {}
+    "play@start.play_content_button": {}
    },
    {
-    "stacked_row_panel@common.horizontal": {
+    "stacked_panel@common.horizontal": {
+     "anchor_from": "center",
+     "anchor_to": "center",
      "size": [
       "50%",
-      "100%c"
+      24
      ],
      "controls": [
       {
@@ -273,25 +338,29 @@
   ]
  },
  // Sign In Button Panel //
+ "background_ic@common.img": {
+  "texture": "textures/ui/text_number_background",
+  "color": "red"
+ },
  "xbox_icon_panel@common.panel": {
   "anchor_from": "top_right",
   "anchor_to": "center",
-  "offset": [
-   -2,
-   2
-  ],
+  "bindings": "$bindings",
   "controls": [
    {
-    "advertence_label@common.txt": {
+    "label@common.txt": {
      "text": "!",
      "text_alignment": "center",
      "shadow": true,
-     "layer": 4,
+     "layer": 9,
+     "color": [
+      1.0,
+      1.0,
+      1.0
+     ],
      "controls": [
       {
-       "background@common.img": {
-        "texture": "textures/ui/text_number_background",
-        "color": "red",
+       "background@start.background_ic": {
         "layer": -1,
         "size": [
          12,
@@ -310,12 +379,23 @@
    24,
    24
   ],
+  "$bindings|default": [
+   {
+    "binding_name": "#sign_out_visible",
+    "binding_name_override": "#visible"
+   }
+  ],
   "controls": [
    {
     "signin_button@start.signin_button": {}
    },
    {
-    "xbox_icon@start.xbox_icon_panel": {}
+    "xbox_icon@start.xbox_icon_panel": {
+     "offset": [
+      -2,
+      2
+     ]
+    }
    }
   ]
  },
@@ -323,17 +403,18 @@
  "invitations_text_panel@common.panel": {
   "anchor_from": "top_right",
   "anchor_to": "center",
-  "offset": [
-   -2,
-   2
-  ],
   "controls": [
    {
-    "advertence_label@common.txt": {
+    "label@common.txt": {
      "text": "#realms_notification_count",
      "text_alignment": "center",
      "shadow": true,
-     "layer": 4,
+     "layer": 9,
+     "color": [
+      1.0,
+      1.0,
+      1.0
+     ],
      "bindings": [
       {
        "binding_name": "#realms_notification_count"
@@ -341,9 +422,7 @@
      ],
      "controls": [
       {
-       "background@common.img": {
-        "texture": "textures/ui/text_number_background",
-        "color": "red",
+       "background@start.background_ic": {
         "layer": -1,
         "size": [
          12,
@@ -367,7 +446,12 @@
     "invitations_button@start.invitations_button": {}
    },
    {
-    "invitations_text@start.invitations_text_panel": {}
+    "invitations_text@start.invitations_text_panel": {
+     "offset": [
+      -2,
+      2
+     ]
+    }
    }
   ]
  },
@@ -381,7 +465,7 @@
   ],
   "offset": [
    "2%",
-   "-4%"
+   "-8%-2px"
   ],
   "$padding_size": [
    2,
@@ -424,8 +508,9 @@
   "controls": [
    {
     "label@common.txt": {
-     "color": "$main_header_text_color",
      "text": "accessibility.popup.message.line1",
+     "text_alignment": "center",
+     "color": "$main_header_text_color",
      "anchor_from": "center",
      "anchor_to": "center",
      "layer": 2,
@@ -488,26 +573,30 @@
   ],
   "controls": [
    {
-    "main_buttons@start.main_buttons_panel": {}
+    "title_image@start.title_image_panel": {}
    },
    {
-    "lower_buttons@start.lower_buttons_panel": {}
+    "main_buttons@start.main_buttons_panel": {}
    },
    {
     "text_bottom@start.text_bottom_panel": {}
    },
    {
-    "gamerpic_account@start.gamerpic_account_panel": {}
+    "lower_buttons@start.lower_buttons_panel": {}
    },
    {
-    "title_image@start.title_image_panel": {}
+    "gamerpic_account@start.gamerpic_account_panel": {}
    }
   ]
  },
  // Screen Base //
+ "settings@common.button": {
+  "$button_text": "menu.settings",
+  "$pressed_button_name": "button.menu_settings"
+ },
  "start_screen@common.base_screen": {
   "$screen_content": "start.start_screen_content",
-  "$screen_bg_content": "",
+  "$screen_bg_content": "start.settings",
   "low_frequency_rendering": true,
   "$screen_animations": [
    "@common.screen_exit_animation_push_fade",

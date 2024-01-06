@@ -1,0 +1,84 @@
+{
+ "namespace": "settings",
+
+ "quick_settings_panel": {
+  "type": "stack_panel",
+  "orientation": "vertical",
+  "anchor_from": "top_left",
+  "anchor_to": "top_left",
+  "ignored": "(not $include_controls_and_settings_sections)",
+  "size": [ "100%", "100%c" ],
+  "controls": [
+   {
+    "paddingTop@common.empty_panel": {
+     "size": [ 2, 2 ]
+    }
+   },
+   {
+    "fov_slider@settings_common.option_slider": {
+     "$ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+     "$option_label": "#field_of_view_slider_label",
+     "$slider_tts_text_value": "#field_of_view_text_value",
+     "$slider_name": "field_of_view",
+     "$slider_value_binding_name": "#field_of_view",
+     "$option_enabled_binding_name": "#field_of_view_enabled",
+     "$label_bindings": [
+      {
+       "binding_name": "$option_label"
+      }
+     ]
+    }
+   },
+   {
+    "padding0@common.empty_panel": {
+     "size": [ 2, 2 ]
+    }
+   },
+   {
+    "option_toggle_hidehud@settings_common.option_toggle": {
+     "$option_label": "options.hidehud",
+     "$option_binding_name": "#hide_hud",
+     "$option_enabled_binding_name": "#hide_hud_enabled",
+     "$toggle_name": "hide_hud"
+    }
+   },
+   {
+    "padding1@common.empty_panel": {
+     "size": [ 2, 2 ]
+    }
+   },
+   {
+    "option_toggle_hidehand@settings_common.option_toggle": {
+     "$option_label": "options.hidehand",
+     "$option_binding_name": "#hide_hand",
+     "$option_enabled_binding_name": "#hide_hand_enabled",
+     "$toggle_name": "hide_hand"
+    }
+   },
+   {
+    "padding2@common.empty_panel": {
+     "size": [ 2, 2 ]
+    }
+   },
+   {
+    "paddingBottom@common.empty_panel": {
+     "size": [ 2, 2 ]
+    }
+   }
+  ]
+ },
+
+ "selector_stack_panel": {
+  "modifications": [
+   {
+    "control_name": "how_to_play_button",
+    "operation": "replace",
+    "value": [
+     {
+      "quick_settings@settings.quick_settings_panel": {}
+     }
+    ]
+   }
+  ]
+ }
+}

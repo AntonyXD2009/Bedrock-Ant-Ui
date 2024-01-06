@@ -4,27 +4,15 @@
   "name": "§lBedrock Ant-Ui §2V1.4",
   "description": "manifest.description",
   "uuid": "b1805889-846a-458e-842e-413fa84dc406",
-  "version": [
-   1,
-   0,
-   4
-  ],
-  "min_engine_version": [
-   1,
-   20,
-   0
-  ]
+  "version": [ 1, 4, 0 ],
+  "min_engine_version": [ 1, 20, 0 ]
  },
  "modules": [
   {
    "type": "resources",
    "description": "Create By @Antony_xd",
    "uuid": "67c721ef-e92d-4fc0-9000-587b41ce8312",
-   "version": [
-    1,
-    1,
-    4
-   ]
+   "version": [ 1, 0, 0 ]
   }
  ]
 }

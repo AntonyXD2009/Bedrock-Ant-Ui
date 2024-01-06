@@ -73,8 +73,8 @@
  "selector_stack_panel": {
   "modifications": [
    {
-    "control_name": "how_to_play_button",
-    "operation": "replace",
+    "array_name": "controls",
+    "operation": "insert_front",
     "value": [
      {
       "quick_settings@settings.quick_settings_panel": {}

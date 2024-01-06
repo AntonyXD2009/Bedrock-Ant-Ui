@@ -1,0 +1,227 @@
+{
+
+ // Code create by @Antony C. Please no steal ;-; //
+
+ "namespace": "start",
+
+ "skin_viewer_panel/paper_doll_name_tag": {
+  "ignored": true
+ },
+
+ "skin_panel/change_profile_or_skin": {
+  "ignored": true
+ },
+
+ "copyright/label": {
+  "shadow": true
+ },
+
+ "version/label": {
+  "shadow": true
+ },
+
+ "welcome": {
+  "type": "panel",
+  "size": [ "50%", "100%" ],
+  "controls": [
+   {
+    "label": { 
+     "type": "label",
+     "text": "accessibility.popup.message.line1",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "layer": 2,
+     "shadow": true,
+     "color": "$main_header_text_color",
+     "size": [ "default", 10 ],
+     "max_size": [ "100%", "100%" ]
+    }
+   },
+   {
+    "label_background": {
+     "type": "image",
+     "texture": "textures/ui/Black",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "layer": 1,
+     "alpha": 0.6,
+     "size": [ "100%sm + 2px", "100%sm + 2px" ],
+     "offset": [ -1, -1 ]
+    }
+   }
+  ]
+ },
+
+ "text_panel": {
+  "modifications": [
+   {
+    "control_name": "development_version",
+    "operation": "replace",
+    "value": [
+     {
+      "welcome@start.welcome": {}
+     }
+    ]
+   }
+  ]
+ },
+
+ "play_content_button@common_buttons.green_content_button": {
+  "$pressed_button_name": "$play_button_target",
+  "$button_content": "start.play_content_panel",
+  "$focus_override_right": "profile_button",
+  "size": [ "100%", 32 ]
+ },
+
+ "play_content_panel": {
+  "type": "panel",
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "layer": 1,
+  "size": [ "100%", "100%" ],
+  "controls": [
+   {
+    "play_text": {
+     "type": "label",
+     "text": "menu.play",
+     "text_alignment": "center",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "font_type": "MinecraftTen",
+     "font_scale_factor": 1.65,
+     "layer": 3,
+     "color": "$main_header_text_color",
+     "size": [ "100%", "default" ],
+     "controls": [
+      {
+       "shadow": {
+        "type": "label",
+        "text": "menu.play",
+        "text_alignment": "center",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "font_type": "MinecraftTen",
+        "font_scale_factor": 1.65,
+        "layer": -1,
+        "alpha": 0.4,
+        "color": "$0_color_format",
+        "size": [ "100%", "default" ],
+        "offset": [ 1, 1 ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+
+ "settings_button@start.main_button": {
+  "$pressed_button_name": "button.menu_settings",
+  "$button_text": "menu.settings",
+  "size": [ "100%", 24 ]
+ },
+
+ "profile_button@start.main_button": {
+  "$pressed_button_name": "button.to_profile_screen",
+  "$button_text": "profileScreen.header",
+  "size": [ "100%", 24 ]
+ },
+ 
+ "store_button@start.main_button": {
+  "$pressed_button_name": "button.menu_store",
+  "$button_text": "menu.store",
+  "size": [ "100%", 24 ]
+ },
+
+ "exit_button@start.main_button": {
+  "$pressed_button_name": "button.menu_exit",
+  "$button_text": "gui.exit",
+  "size": [ "100%", 24 ]
+ },
+
+ "main_buttons_stack": {
+  "type": "stack_panel",
+  "size": [ "100%", "100%c" ],
+  "controls": [
+   { "play@start.play_content_button": {} },
+   {
+    "stacked_panel": {
+     "type": "stack_panel",
+     "orientation": "horizontal",
+     "size": [ "50%", 24 ],
+     "controls": [
+      { "settings@start.settings_button": {} },
+      { "profile@start.profile_button": {} }
+     ]
+    }
+   },
+   { "store@start.store_button": {} },
+   { "exit@start.exit_button": {} }
+  ]
+ },
+
+ "main_buttons_panel": {
+  "size": [ 172, "100%c" ],
+  "modifications": [
+   {
+    "control_name": "stacked_rows",
+    "operation": "replace",
+    "value": [
+     { "main_buttons_stack@start.main_buttons_stack": {} }
+    ]
+   }
+  ]
+ },
+
+ "lower_online_buttons_panel/stacked_column/feedback_padding": {
+  "size": [ 2, 0 ]
+ },
+
+ "lower_online_buttons_panel/stacked_column/achievements_padding": {
+  "size": [ 2, 0 ]
+ },
+ 
+ "lower_online_buttons_panel/stacked_column/invite_padding": {
+  "size": [ 2, 0 ]
+ },
+
+ "start_screen_content": {
+  "type": "panel",
+  "controls": [
+   { "main_buttons_stack@start.main_buttons_stack_panel": {} },
+   { "skin_panel@start.skin_panel": {} },
+   { "text_panel@start.text_panel": {} },
+   {
+    "online_button_stack": {
+     "type": "stack_panel",
+     "orientation": "vertical",
+     "anchor_to": "bottom_left",
+     "anchor_from": "bottom_left",
+     "size": [ "50% - 74px", "100%c" ],
+     "offset": [ 0, "-6%" ],
+     "controls": [
+      { "gathering_panel@start.gathering_panel": {} },
+      { "upper_online_buttons_panel@start.upper_online_buttons_panel": {} },
+      { "lower_online_buttons_panel@start.lower_online_buttons_panel": {} }
+     ]
+    }
+   },
+   {
+    "popup_dialog_factory": {
+     "type": "factory",
+     "control_ids": {
+      "cloud_upload_prompt": "cloud_upload_prompt@start.cloud_upload_prompt"
+     }
+    }
+   }
+  ]
+ },
+
+ "settings@common.button": {
+  "$pressed_button_name": "button.menu_settings"
+ },
+
+ "start_screen": {
+  "$screen_bg_content": "start.settings"
+ }
+}

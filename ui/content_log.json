@@ -1,0 +1,47 @@
+{
+ // Code create by @Antony C. Please no steal ;-; //
+
+ "namespace": "content_log",
+
+ "anim_content_log_bg_offset_pop": {
+   "anim_type": "offset",
+   "easing": "out_expo",
+   "duration": 0.65,
+   "from": [ "50%", 0 ],
+   "to": [ 0, 0 ],
+   "next": "@content_log.anim_content_log_bg_offset_wait"
+ },
+
+ "anim_content_log_bg_offset_wait": {
+  "anim_type": "wait",
+  "duration": "($content_log_item_lifetime - 0.3)",
+  "next": "@content_log.anim_content_log_bg_offset_push"
+ },
+
+ "anim_content_log_bg_offset_push": {
+  "anim_type": "offset",
+  "easing": "in_expo",
+  "duration": 0.65,
+  "from": [ 0, 0 ],
+  "to": [ "50%", 0 ]
+ },
+
+ "content_log_label": {
+  "hide_hyphen": true,
+  "size": [ "100%-98px", "default" ]
+ },
+
+ "content_log_grid_item/content_log_background": {
+  "anchor_from": "top_left",
+  "anchor_to": "top_left",
+  "size": [ "100%+98px", "100%c" ],
+  "offset": "@content_log.anim_content_log_bg_offset_pop"
+ },
+
+ "content_log_panel": {
+  "anchor_from": "top_right",
+  "anchor_to": "top_right",
+  "size": [ "50%-28px", "100%c" ],
+  "max_size": [ "50%-30px", "100%c" ]
+ }
+}

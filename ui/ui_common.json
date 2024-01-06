@@ -1,0 +1,86 @@
+{
+ 
+ // Code create by @Antony C. Please no steal ;-; //
+
+ "namespace": "common",
+
+ "screen_exit_animation_push_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": [ 0, 0 ],
+  "to": [ 0, "-100%" ],
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+ },
+
+ "screen_exit_animation_pop_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": [ 0, 0 ],
+  "to": [ 0, "-100%" ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+ },
+
+ "screen_entrance_animation_push_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": [ 0, "100%" ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+ },
+
+ "screen_entrance_animation_pop_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": [ 0, "-100%" ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ },
+
+ "screen_exit_animation_push_fade": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": 1,
+  "to": 0.0,
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+ },
+
+ "screen_exit_animation_pop_fade": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": 1,
+  "to": 0.0,
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+ },
+
+ "screen_entrance_animation_push_fade": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": 0.0,
+  "to": 1,
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+ },
+
+ "screen_entrance_animation_pop_fade": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": 0.7,
+  "from": 0.0,
+  "to": 1,
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ }
+}

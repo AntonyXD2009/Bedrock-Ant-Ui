@@ -1,0 +1,98 @@
+{
+
+ // Code create by @Antony C. Please no steal ;-; //
+
+ // ¿Ore-Ui Style? //
+
+ "namespace": "safe_zone",
+
+ "corner_image_common": {
+  "size": [ 18, 18 ]
+ },
+
+ "confirm_button": {
+  "$default_button_texture": "textures/ui/button_borderless_green",
+  "$hover_button_texture": "textures/ui/button_borderless_greenhover",
+  "$pressed_button_texture": "textures/ui/button_borderless_greenpressed",
+  "$default_text_color": "$green_button_default_text_color",
+  "$hover_text_color": "$green_button_hover_text_color",
+  "$pressed_text_color": "$green_button_pressed_text_color",
+  "$border_visible": false,
+  "size": [ "100%-12px", 32 ]
+ },
+
+ "title_text": {
+  "color": "$main_header_text_color",
+  "font_type": "MinecraftTen",
+  "offset": [ 0, -2 ]
+ },
+
+ "background_panel": {
+  "type": "image",
+  "texture": "textures/background_panel",
+  "layer": 1
+ },
+
+ "content_panel/safe_zone_slider_x": {
+  "ignored": false
+ },
+
+ "content_panel/safe_zone_slider_y": {
+  "ignored": false
+ },
+
+ "content_panel/screen_position_slider_x": {
+  "ignored": false
+ },
+
+ "content_panel/screen_position_slider_y": {
+  "ignored": false
+ },
+
+ "content_panel": {
+  "modifications": [
+   {
+    "control_name": "instruction_text_button",
+    "operation": "replace",
+    "value": [
+     {
+      "instructions_text@safe_zone.instructions_text": {}
+     }
+    ]
+   }
+  ]
+ },
+ 
+ "safe_zone_screen/main_content_panel/scrolling_panel": {
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "size": [ "100%-16px", "100%-72px" ],
+  "offset": [ 0, -4 ],
+  "$scrolling_pane_offset": [ 0, -4 ],
+  "$scroll_size": [ 4, "100%" ]
+ },
+
+ "safe_zone_screen/main_content_panel/confirm_button": {
+  "offset": [ 0, -8 ]
+ },
+
+ "safe_zone_screen/main_content_panel/title_text": {
+  "size": [ "default", 14 ],
+  "offset": [ 0, 8 ]
+ },
+
+ "safe_zone_screen/main_content_panel": {
+  "size": [ 192, 204 ],
+  "modifications": [
+   {
+    "control_name": "common_panel",
+    "operation": "replace",
+    "value": [
+     {
+      "background@safe_zone.background_panel": {}
+     }
+    ]
+   }
+  ]
+ }
+}

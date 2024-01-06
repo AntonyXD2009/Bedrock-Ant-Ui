@@ -58,11 +58,6 @@
     }
    },
    {
-    "padding2@common.empty_panel": {
-     "size": [ 2, 2 ]
-    }
-   },
-   {
     "paddingBottom@common.empty_panel": {
      "size": [ 2, 2 ]
     }
@@ -73,8 +68,8 @@
  "selector_stack_panel": {
   "modifications": [
    {
-    "array_name": "controls",
-    "operation": "insert_front",
+    "control_name": "how_to_play_button",
+    "operation": "replace",
     "value": [
      {
       "quick_settings@settings.quick_settings_panel": {}

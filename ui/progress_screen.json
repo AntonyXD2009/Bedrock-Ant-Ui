@@ -1,6 +1,0 @@
-{
- "namespace": "progress",
- "abort_button@common.txt_button": {},
- "retry_button@common.txt_button": {},
- "cancel_button@common.red_txt_button": {}
-}

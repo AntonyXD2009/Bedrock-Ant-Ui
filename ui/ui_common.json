@@ -1,7 +1,110 @@
 {
  // Code create by @Antony C. Please no steal ;-; //
-
+ 
  "namespace": "common",
+
+ "screen_header_image": {
+  "type": "image",
+  "texture": "textures/ui/screen_header_image",
+  "size": [ "100%", 28 ]
+ },
+
+ "screen_header_fill": {
+  "type": "image",
+  "texture": "textures/ui/screen_header_fill",
+  "size": [ "100%", 8 ]
+ },
+
+ "back_button_template@common.button": {
+  "anchor_from": "left_middle",
+  "anchor_to": "left_middle",
+  "$pressed_button_name": "button.menu_exit",
+  "ignored": "$back_button_visible",
+  "layer": 2,
+  "size": [ 24, 24 ],
+  "offset": [ 4, 0 ],
+  "bindings": [
+   {
+    "binding_name": "(not #is_using_gamepad)",
+    "binding_name_override": "#visible"
+   }
+  ],
+  "controls": [
+   {
+    "default": {
+     "type": "image",
+     "texture": "textures/ui/arrow_left",
+     "layer": 1,
+     "color": [ 1.0, 1.0, 1.0 ],
+     "size": [ 24, 24 ]
+    }
+   },
+   {
+    "hover": {
+     "type": "image",
+     "texture": "textures/ui/arrow_left",
+     "layer": 1,
+     "color": [ 0.85, 0.85, 0.85 ],
+     "size": [ 24, 24 ]
+    }
+   },
+   {
+    "pressed": {
+     "type": "image",
+     "texture": "textures/ui/arrow_left",
+     "layer": 1,
+     "color": [ 0.65, 0.65, 0.65 ],
+     "size": [ 24, 24 ]
+    }
+   }
+  ]
+ },
+
+ "screen_header_title": {
+  "type": "panel",
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "size": [ "fill", 16 ],
+  "controls": [
+   {
+    "header_title_text": {
+     "type": "label",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "text": "$screen_header_title",
+     "text_alignment": "center",
+     "ignored": "$screen_header_title_visible",
+     "layer": 3,
+     "color": "$screen_header_title_text_color",
+     "size": [ "100%", 16 ],
+     "offset": [ 0, 0 ]
+    }
+   }
+  ]
+ },
+
+ "screen_header_panel": {
+  "type": "panel",
+  "anchor_from": "top_left",
+  "anchor_to": "top_left",
+  "$back_button_visible|default": true,
+  "$screen_header_title_visible|default": true,
+  "controls": [
+   {
+    "screen_header_image@common.screen_header_image": {
+     "layer": 1,
+     "controls": [
+      {
+       "back_button@common.back_button_template": {}
+      },
+      {
+       "screen_header_title@common.screen_header_title": {}
+      }
+     ]
+    }
+   }
+  ]
+ },
 
  "help_button": {
   "visible": false

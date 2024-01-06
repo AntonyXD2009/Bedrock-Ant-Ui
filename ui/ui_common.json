@@ -20,41 +20,35 @@
   "anchor_to": "left_middle",
   "$pressed_button_name": "button.menu_exit",
   "ignored": "$back_button_visible",
-  "layer": 2,
+  "$back_button_texture|default": "textures/ui/back_arrow_left",
+  "layer": 3,
   "size": [ 24, 24 ],
-  "offset": [ 4, 0 ],
-  "bindings": [
-   {
-    "binding_name": "(not #is_using_gamepad)",
-    "binding_name_override": "#visible"
-   }
-  ],
+  "offset": [ 2, -2 ],
   "controls": [
    {
     "default": {
      "type": "image",
-     "texture": "textures/ui/arrow_left",
+     "texture": "$back_button_texture",
      "layer": 1,
-     "color": [ 1.0, 1.0, 1.0 ],
      "size": [ 24, 24 ]
     }
    },
    {
     "hover": {
      "type": "image",
-     "texture": "textures/ui/arrow_left",
+     "texture": "$back_button_texture",
      "layer": 1,
      "color": [ 0.85, 0.85, 0.85 ],
-     "size": [ 24, 24 ]
+     "size": [ 22, 22 ]
     }
    },
    {
     "pressed": {
      "type": "image",
-     "texture": "textures/ui/arrow_left",
+     "texture": "$back_button_texture",
      "layer": 1,
      "color": [ 0.65, 0.65, 0.65 ],
-     "size": [ 24, 24 ]
+     "size": [ 20, 20 ]
     }
    }
   ]
@@ -64,7 +58,7 @@
   "type": "panel",
   "anchor_from": "center",
   "anchor_to": "center",
-  "size": [ "fill", 16 ],
+  "size": [ "100%", 16 ],
   "controls": [
    {
     "header_title_text": {
@@ -73,11 +67,13 @@
      "anchor_to": "center",
      "text": "$screen_header_title",
      "text_alignment": "center",
+     "font_type": "MinecraftTen",
+     "font_scale_factor": 1.65,
      "ignored": "$screen_header_title_visible",
      "layer": 3,
      "color": "$screen_header_title_text_color",
      "size": [ "100%", 16 ],
-     "offset": [ 0, 0 ]
+     "offset": [ 0, -2 ]
     }
    }
   ]
@@ -87,8 +83,9 @@
   "type": "panel",
   "anchor_from": "top_left",
   "anchor_to": "top_left",
-  "$back_button_visible|default": true,
-  "$screen_header_title_visible|default": true,
+  "$back_button_visible|default": false,
+  "$screen_header_title_visible|default": false,
+  "size": [ "100%", "100%c" ],
   "controls": [
    {
     "screen_header_image@common.screen_header_image": {

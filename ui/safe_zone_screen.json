@@ -28,7 +28,7 @@
 
  "background_panel": {
   "type": "image",
-  "texture": "textures/background_panel",
+  "texture": "textures/ui/background_panel",
   "layer": 1
  },
 

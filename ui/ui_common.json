@@ -4,6 +4,49 @@
 
  "namespace": "common",
 
+ "help_button": {
+  "visible": false
+ },
+
+ "scroll_box/box": {
+  "modifications": [
+   {
+    "control_name": "touch_box",
+    "operation": "remove"
+   }
+  ]
+ },
+
+ "scroll_box/box/mouse_box": {
+  "ignored": false
+ },
+
+ "scrolling_panel": {
+  "modifications": [
+   {
+    "control_name": "scroll_touch",
+    "operation": "remove"
+   }
+  ]
+ },
+
+ "scrolling_panel/scroll_mouse": {
+  "ignored": false
+ },
+
+ "selected_item_details/item_panel_image/item_text_label": {
+  "shadow": true
+ },
+
+ "selected_item_details/item_panel_image": {
+  "size": [ "100%c+8px", "100%c+4px" ]
+ },
+
+ "selected_item_details": {
+  "offset": "$offset",
+  "$offset|default": [ 0, "-16px" ]
+ },
+
  "screen_exit_animation_push_offset": {
   "anim_type": "offset",
   "easing": "out_cubic",

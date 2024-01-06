@@ -3,4 +3,4 @@ Official Creator: @Antony_XD Contributors: (none)
 
 #### Minecraft Bedrock
 
-With a unique style focusing on especially #### Ore-Ui Minecraft
+With a unique style focusing on especially *Ore-Ui Minecraft*

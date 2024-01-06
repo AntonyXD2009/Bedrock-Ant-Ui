@@ -146,6 +146,19 @@
   "$offset|default": [ 0, "-16px" ]
  },
 
+ "base_screen": {
+  "variables": [
+   {
+    "requires": "$desktop_screen",
+    "$extra_large_screen_size": [ "100%-8px", "100%-8px" ]
+   },
+   {
+    "requires": "($pocket_screen or $is_holographic)",
+    "$extra_large_screen_size": [ "100%-4px", "100%-4px" ]
+   }
+  ]
+ },
+
  "screen_exit_animation_push_offset": {
   "anim_type": "offset",
   "easing": "out_cubic",

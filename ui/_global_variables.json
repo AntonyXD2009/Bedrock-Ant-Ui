@@ -1,20 +1,19 @@
 {
-
  // Code create by @Antony C. Please no steal ;-; //
 
- // -- Green Template Color -- //
+ // -- Green Button Template Color -- //
 
  "$green_button_default_text_color": [ 1.0, 1.0, 1.0 ],
  "$green_button_hover_text_color": [ 0.7, 0.7, 0.7 ],
  "$green_button_pressed_text_color": [ 0.5, 0.5, 0.5 ],
 
- // -- Red Template Color -- //
+ // -- Red Button Template Color -- //
 
  "$red_button_default_text_color": [ 1.0, 1.0, 1.0 ],
  "$red_button_hover_text_color": [ 0.7, 0.7, 0.7 ],
  "$red_button_pressed_text_color": [ 0.5, 0.5, 0.5 ],
 
- // -- White Template Color -- //
+ // -- White Button Template Color -- //
 
  "$white_button_default_text_color": [ 0.3, 0.3, 0.3 ],
  "$white_button_hover_text_color": [ 1.0, 1.0, 1.0 ],
